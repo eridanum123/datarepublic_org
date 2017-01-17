@@ -1,0 +1,169 @@
+
+<!-- <div class="row"> -->
+	<div class="container-fluid data-container">
+	    <div class="header-section row">
+	    	<div class="logo-modulo col-xs-12 col-sm-4 col-sm-push-8 col-md-4 col-md-push-8 col-lg-4 col-lg-push-8">
+	    		<img src="images/logo-conecta-modulo.png">
+	    	</div>
+	        <div class="title-modulo col-xs-12 col-sm-8 col-sm-pull-4 col-md-8 col-md-pull-4 col-lg-8 col-lg-pull-4">
+	        	<h1>UN ESPACIO COLABORATIVO Y ABIERTO</h1>
+	        	<h2>para actores y productores de datos</h2>
+	        	<div class="description-modulo">
+	        		<h3>Datos recopilados a la fecha para México, Colombia y Costa Rica</h3>
+	        	</div>
+	        </div>
+	    </div>
+	    <div class="desription-text-conecta">
+	    	<p>En este espacio encontrarás un catálogo de conjuntos de datos de diferentes fuentes que se van recopilando día tras día.
+	    	<br>
+	    	Los datos están agrupados por países y están relacionados con el o los ODS a los que pueden contribuir.
+	    	</p>
+	    </div>
+	    <div class="datos-fuentes container-fluid">
+	      <div class="titulo-fuentes col-xs-12 col-sm-12 col-md-3 col-lg-3">
+	        Datos por tipo de fuente
+	      </div>
+	      <div class="cifras-fuentes col-xs-12 col-sm-12 col-md-9 col-lg-9 row">
+	        <div class="col-xs-6 col-sm-4 col-md-2 cifra ">
+	          <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6 circulo-fuente">Sector Público</div>
+	          <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6 numero-fuente" id="fuente-1">{{countByType("SECTOR PÚBLICO")}}</div>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-2 cifra ">
+	          <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6 circulo-fuente">Sector Privado</div>
+	          <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6 numero-fuente" id="fuente-2">{{countByType("SECTOR PRIVADO")}}</div>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-2 cifra ">
+	          <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6 circulo-fuente">Sociedad Civil</div>
+	          <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6 numero-fuente" id="fuente-3">{{countByType("SOCIEDAD CIVIL")}}</div>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-2 cifra ">
+	          <div class="ccol-xs-12 col-sm-6 col-md-12 col-lg-6 circulo-fuente txt1">Academia</div>
+	          <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6 numero-fuente" id="fuente-4">{{countByType("ACADEMIA")}}</div>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-2 cifra ">
+	          <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6 circulo-fuente txt1">Filantropía</div>
+	          <div class="ccol-xs-12 col-sm-6 col-md-12 col-lg-6 numero-fuente" id="fuente-5">{{countByType("FILANTROPÍA")}}</div>
+	        </div>
+	        <div class="col-xs-6 col-sm-4 col-md-2 cifra ">
+	          <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6 circulo-fuente txt2">Organismos Multilaterales</div>
+	          <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6 numero-fuente" id="fuente-6">{{countByType("ORGANISMOS MULTILATERALES")}}</div>
+	        </div>
+	      </div>
+	    </div>
+
+	    <div class="totales-data container-fluid row">
+	      <div class="total-ods hidden-xs col-sm-7 col-md-7 col-lg-7 container-fluid">
+	        <div class="titulo-total">
+	          <h1> HASTA HOY SE HAN CATALOGADO <span id="numero-total-ods">{{uniqueData.length}}</span>
+	          <br>
+	          CONJUNTOS DE DATOS 
+			  </h1>
+	        </div>
+	        <div class="grafica-total-ods container">
+	            <ul class="" >
+	              <li class="ods-text">ODS</li>
+
+	              <div  ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]" >
+		              <li class="barra-ods" id="ods-{{n}}">
+		              	<div class="ods-index-bar">{{n}}</div>
+		              	<div class="barra-value-ods"></div>
+		              </li>
+	              </div>
+
+	            </ul>
+	          <div class="text-value-ods"></div> 
+	        </div>
+	        <div class="lista-ods container-fluid">
+	        		<span class="numero-ods">1</span>Fin de la pobreza •
+	        		<span class="numero-ods">2</span>Hambre cero •
+	        		<span class="numero-ods">3</span>Salud y bienestar •
+	        		<span class="numero-ods">4</span>Educación de calidad •
+	        		<span class="numero-ods">5</span>Igualdad de género •
+	        		<span class="numero-ods">6</span>Agua limpia y saneamiento •
+	        		<span class="numero-ods">7</span>Energía asequible y no contaminante •
+	        		<span class="numero-ods">8</span>Trabajo decente y crecimiento económico •
+	        		<span class="numero-ods">9</span>Industria, innovación e infraestructura •
+	        		<span class="numero-ods">10</span>Reducción de las desigualdades •
+	        		<span class="numero-ods">11</span>Ciudades y comunidades sostenibles
+	        		responsables •
+	        		<span class="numero-ods">13</span>Acción por el clima •
+	        		<span class="numero-ods">14</span>Vida submarina •
+	        		<span class="numero-ods">15</span>Vida de ecosistemas terrestres •
+	        		<span class="numero-ods">16</span>Paz, justicia e instituciones sólidas •
+	        		<span class="numero-ods">17</span>Alianzas para lograr los objetivos •
+	        </div>
+
+	      </div>
+	      <div class="total-ods-res col-xs-12 hidden-sm hidden-md hidden-lg container-fluid">
+	        <div class="titulo-total">
+	          <h1> HASTA HOY SE HAN CATALOGADO <span id="numero-total-ods">{{uniqueData.length}}</span>
+	          <br>
+	          CONJUNTOS DE DATOS 
+			  </h1>
+	        </div>
+	        <div class="grafica-total-ods-res container-fluid row">
+	          <div class="text-value-ods-res col-xs-1"></div> 
+	          <ul class="col-xs-11">
+	            <li class="ods-text-res">ODS</li>
+
+				<div  ng-repeat="n in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]">
+					<li class="barra-ods-res" id="ods-{{n}}">
+						<div class="ods-index-bar">{{n}}</div>
+						<div class="barra-value-ods horizontal-value-ods"></div>
+					</li>
+				</div>
+
+	          </ul>
+	          
+	        </div>
+	      </div>
+	      <div class="total-pais col-xs-12 col-sm-5 col-md-5 col-lg-5">
+	        <div class="titulo-total">
+	          <h1>CONJUNTOS DE DATOS por país</h1>
+	          <h3>Haz clic en el nombre de cada país para saber más.</h3>
+	        </div>
+	        <div class="grafica-total-pais">
+	          <ul>
+	          	<a href="#!network-viz/mexico" class="text-info" >
+		            <li class="pais-data">
+		              <h2>México <span id="mexico-data">{{countByCountry("MÉXICO")}}</span></h2>
+		            </li>
+		        </a>
+		        <a href="#!network-viz/colombia" class="text-info" >
+		            <li class="pais-data">
+		              <h2>Colombia<span id="colombia-data">{{countByCountry("COLOMBIA")}}</span></h2>
+		            </li>
+		        </a>
+		        <a href="#!network-viz/costa-rica" class="text-info" >
+		            <li class="pais-data">
+		              <h2>Costa Rica <span id="costa-rica-data">{{countByCountry("COSTA RICA")}}</span></h2>
+		            </li>
+		        </a>
+	          </ul>
+	        </div>
+	        <div class="descarga row">
+	          <div class="txt-descarga col-xs-5 col-sm-4 col-md-5">
+	            <h4>Descargar</h4>
+	          </div>
+	          <div class="items-descargas col-xs-7 col-sm-8 col-md-7 row">
+	            <div class="item-csv col-xs-6 col-sm-6 col-md-6">
+	              <a href="files/ODS_datasets.zip"><h4>CSV</h4></a>
+	            </div>
+	            <div class="item-xlsx col-xs-6 col-sm-6 col-md-6">
+	              <a href="files/ODS_datasets.xlsx"><h4>XLSX</h4></a>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="descripcion-descarga">
+	        	<p> 
+					En este espacio encontrarás un catálogo de conjuntos de datos de diferentes fuentes que se van recopilando día tras día. Con esto esperamos facilitar el acceso a los datos que pueden estar ubicados en diferentes lugares.
+				<br><br>
+					Los datos están agrupados por países y están relacionados con el o los ODS a los que pueden contribuir. Puedes descargar libremente la matriz en formato csv o xlsx, en la que verás el diccionario de variables, los conjuntos de datos y las variables que los describen.
+	        	</p>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+
+<!-- </div> -->

@@ -1,0 +1,610 @@
+.network-container{
+  height: 100vh;
+  padding-top: 13.6vh;
+  /*margin-bottom: 0.5vh;*/
+}
+.network-viz-intro p{
+  padding: 15px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  text-align: center;
+  color: #21285A;
+  margin-bottom: 0;
+}
+#forcemap{
+  text-align: center;
+  background-color: white;
+  /*
+  min-height: 83.5vh;
+  */
+}
+/*
+#forcemap svg{
+  width: 756px;
+  height: 756px;
+}
+*/
+.contacto-info-usuario{
+  float: left;
+  background-color: #21285A;
+  padding: 10px 20px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+}
+.contacto-info-usuario p{
+  line-height: 16px;
+  font-size: 14px;
+}
+.contacto-info-usuario p a{
+  color: #fff;
+  font-size: 16px;
+}
+.contacto-info-usuario p a:hover{
+  color: #23d2cd;
+}
+.link {
+  stroke: #000;
+  opacity: 0.01;
+  stroke-width: 1px;
+}
+
+#licensing {
+  fill: green;
+}
+
+.node {
+  fill: #ccc;
+  stroke: #333;
+  stroke-width: 0px;
+  opacity: 0.2;
+}
+
+.node.highligthed {
+  opacity: 1;
+}
+
+.node.selected {
+  stroke-width: 2px;
+  stroke: #000;
+/*  -webkit-filter: drop-shadow( -1px -1px 1px #000 );
+     -moz-filter: drop-shadow( -1px -1px 1px #000 ); 
+          filter: drop-shadow( -1px -1px 1px #000 ); */
+}
+
+.node:hover{
+  stroke-width: 1px;
+  
+}
+
+circle{
+  fill:white;
+}
+
+
+.link.highligthed {
+  /*stroke-dasharray: 0,2 1;*/
+  stroke: #888;
+  opacity:0.4;
+  stroke-width: 1px;
+}
+
+
+text {
+  font: 12px sans-serif;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+.ods {
+ fill:#23d2cd;
+ color:#23d2cd;
+}
+.fuente {
+ fill:#bdcc4a;
+ color:#bdcc4a;
+}
+.datos {
+ fill:#666;
+ color:#666;
+}
+
+#tooltip{
+  font: 14px sans-serif;
+  //text-shadow: 2px 2px 20px #000;
+  padding-top:20px;
+}
+
+.tooltip{
+  color:white;
+  background-color: #282C59;
+}
+
+.network-viz-container{
+  background-color: white;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+.node:not(:hover) .nodetext {
+  display: none;
+}
+
+.network-node-info-container{
+  padding-left: 0px;
+  padding-right: 0px;
+  border-width: 0px;
+  border-style: solid;
+  border-left-width: 1px;
+  border-left-color: grey;
+  height: auto;
+  background-color: white;
+  
+}
+
+.network-node-info{
+  background:url('../images/seccion-background.jpg') repeat;
+  /*padding-left: -15px!important;*/
+  color:#282c59;
+  overflow: auto;
+  height: 83.5vh;
+  
+}
+
+.network-node-info h2{
+  color:#282c59;
+  font-weight:800;
+  width:100%;
+  text-align:center;
+  font-size:4em;
+}
+
+
+.conventions-laws{
+  height: 45px;
+}
+.network-convention-box{
+  background-color: #eee;
+  padding: 5px 20px;
+}
+.network-convention{
+  font-family: 'BebasNeue';
+  font-size: 22px;
+  color: #21285a;
+  text-align: justify;
+  float: left;
+  margin-right: 25px;
+}
+.leyes-relacionadas{
+  background-color: #666666;
+  height: 43px;
+}
+.leyes-relacionadas h2{
+  font-family: 'BebasNeue';
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  line-height: 43px;
+}
+.leyes-relacionadas:hover{
+  background-color: #bdcc4a;
+}
+.ley-pais-title{
+  font-family: 'BebasNeue';
+  text-align: center;
+  color: #21285A;
+  font-size: 30px;
+}
+.items-ley-header{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+  padding: 6px 0 !important;
+  font-family: 'BebasNeue';
+  background-color: #BDCC4A;
+}
+.items-ley{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+  color: #21285A;
+  padding: 10px 0 !important;
+  font-family: 'Roboto';
+}
+.ley-gray-row{
+  background-color: #eee;
+}
+.img-ley-link {
+  height: 45px;
+  width: 45px;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url(../images/ley-link_off.png);
+}
+.img-ley-link:hover{
+    background-image: url(../images/ley-link_on.png);
+}
+.button-close-leyes{
+  font-family: 'BebasNeue';
+  color: #fff;
+  border:none;
+}
+.btn.button-close-leyes:hover {
+    background-color: #BDCC4A;
+}
+.network-data {
+  padding: 0 10px;
+  text-transform: capitalize;
+}
+
+.network-data .row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.network-data-ods{
+  height: 50px;
+  background-color: #21285A;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+.network-data h4{
+  font-family: 'BebasNeue';
+  font-size: 35px;
+  color: #23D0CB;
+  text-align: left;
+  margin: 0;
+}
+
+.iconos-ods-network img{
+  width: 50px;
+  opacity: 1;
+  /*padding-top: 50px;*/
+  margin-bottom: 5px;
+    float: left;
+    margin-right: 5px;
+    margin-top: 4px;
+    display: inline-block;
+
+}
+
+.iconos-ods-network{
+  /*display: inline-flex;*/
+  margin-left: 5px;
+  margin-bottom: 5px;
+
+}
+
+.network-data-list div{
+  cursor: pointer;
+}
+
+.network-data-list div:hover{
+  cursor: pointer;
+  font-style: italic;
+  font-size: 1.02em
+
+}
+.ods-image{
+  text-align: center;
+}
+.ods-image img{
+  margin: auto auto;
+  display: inline;
+  text-align: center;
+  float:right;
+
+}
+
+.ods-image span{
+  text-align: center;
+}
+
+.nodename{
+  font-family: 'Roboto';
+  font-weight: 400;
+  text-align: center;
+  font-size: 24px;
+}
+
+#network-viz-header p{
+  margin-bottom: 0;
+
+}
+.header-info-network {
+  margin-top: 20px !important;
+}
+.conecta-network {
+  border-right: dotted 1px #21285A;
+}
+.conecta-network img {
+  max-width: 110%;
+  margin: 0 auto;
+}
+.country-name{
+  color:#21285A;
+  width: 100%;
+  text-align: left;
+  font-size: 40px;
+  font-family: 'Roboto';
+  font-weight: 100;
+  line-height: 85px;
+}
+.network-instructions h6{
+    width: 100%;
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    margin: 20px 0;
+}
+.perfil-paises {
+    height: auto;
+    margin-top: 40px !important;
+}
+.item-perfil_1{
+  padding-top: 10px;
+  height: 210px;
+  border-right: 1px dotted #ddd;
+  border-bottom: 1px solid #ddd;
+
+}
+.item-perfil_1>.img-item {
+  width: 100%;
+  float: left;
+}
+.item-perfil_1>.img-item img{
+  float: none;
+}
+.item-perfil_1>.text-item{
+  text-align: center;
+  margin:5px 0;
+  float: left; 
+  width: 100%;
+}
+.item-perfil_1>.text-item h5{
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #242a59;
+  font-size: 16px; 
+}
+.item-perfil_1>.text-item h5 small{
+  color: #242a59;
+}
+.item-perfil_1>.text-item h4{
+  font-family: 'BebasNeue';
+  color: #666;
+  font-size: 24px;
+  margin: 5px 0; 
+  line-height: 22px;
+}
+.item-perfil_1>.text-item p{
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #242a59;
+  font-size: 12px; 
+  margin: 0 0 5px;
+}
+
+.item-perfil_2{
+  padding-top: 10px !important;
+  height: 130px;
+  border-right: 1px dotted #ddd;
+}
+.item-perfil_2>.img-item {
+  float: left;
+}
+.item-perfil_2>.img-item img{
+  float: none;
+}
+.item-perfil_2>.text-item{
+  margin:5px 0;
+
+}
+.item-perfil_2>.text-item h5{
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #242a59;
+  font-size: 16px; 
+  text-align: left;
+}
+.item-perfil_2>.text-item h5 small{
+  color: #242a59;
+}
+.item-perfil_2>.text-item h4{
+  font-family: 'BebasNeue';
+  color: #666;
+  font-size: 24px;
+  margin: 5px 0; 
+  line-height: 22px;
+}
+.item-perfil_2>.text-item p{
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #242a59;
+  font-size: 12px; 
+  margin: 0 0 5px;
+}
+.network-header-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 19px;
+  line-height: 19px;
+  color: #BDCC4A;
+  padding: 6px 0;
+  font-family: 'BebasNeue';
+}
+
+.network-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8vw; 
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+.network-row .graph-selector{
+  cursor: pointer;
+  font-family: 'Roboto';
+  font-size: 12px;
+}
+
+
+.network-row .source-link{
+  text-align: center;
+  width: 100%;
+  text-transform: none;
+
+}
+
+.network-grey-row{
+  background-color: #EEE;
+}
+
+.network-download-links{
+  bottom: -13px;
+  width: 100%;
+  font-size: 4vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 57px;
+  background-color: #eeeeee;
+}
+.network-download-links h4 {
+    color: #282c59;
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 32px;
+    line-height: 57px;
+    margin: 0;
+}
+
+.item-csv a>h4 {
+    background-image: url(../images/iconsNav/icons-download_off.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 40px;
+}
+@media only screen and (min-width: 1400px){
+   .conecta-network img {
+    max-width: 80%;
+  }
+}
+@media only screen and (min-width: 1200px){
+  .country-name{
+    line-height: 96px;
+  }
+  .item-perfil_2{
+    height: 115px;
+  }
+}
+@media only screen and (max-width: 992px){
+  #forcemap{
+    border-bottom: solid 1px grey;
+  }
+  .network-download-links h4 {
+      font-size: 22px;
+  }
+  .network-download-links h4 {
+      font-size: 35px;
+  }
+  .conecta-network img {
+    max-width: 50%;
+  }
+  .country-name {
+    font-size: 50px;
+    line-height: 112px;
+  }
+  .item-perfil_1 {
+    padding-top: 10px;
+    height: 190px;
+  }
+}
+@media only screen and (max-width: 768px){
+  .network-container{
+    padding-top: 8.5vh;
+  }
+  .conecta-network img {
+    max-width: 80%;
+  }
+  .country-name {
+    line-height: 106px;
+  }
+  .leyes-relacionadas {
+    margin-bottom: 20px;
+  }
+  .item-perfil_1>.text-item h5 small {
+    font-size: 100%;
+  }
+  .item-perfil_2 {
+    height: 160px;
+  }
+  .item-perfil_2>.text-item h5{
+    text-align: center;
+  }
+  .item-perfil_2>.text-item h4 {
+    text-align: center;
+  }
+
+}
+@media only screen and (max-width: 600px){
+  .items-ley-header{
+    font-size: 17px;
+    line-height: 17px;
+  }
+  .items-ley{
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .country-name {
+    line-height: 80px;
+  }
+  .item-perfil_1>.text-item h5 small {
+    font-size: 90%;
+  }
+  .img-ley-link {
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+
+
+}
+@media only screen and (max-width: 500px){
+  .items-ley-header{
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .items-ley{
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .conecta-network img {
+    max-width: 100%;
+  }
+  .network-download-links h4 {
+      font-size: 30px;
+  }
+  .country-name {
+    font-size: 35px;
+    line-height: 76px;
+  }
+  .item-perfil_1 {
+    height: 208px;
+  }
+  .item-perfil_2 {
+    height: 185px;
+  }
+}

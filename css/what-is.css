@@ -1,0 +1,324 @@
+.home-section-title.que-es-data {
+    margin: 10vh 0 10px 0;
+}
+.what-is-box {
+  float: left;
+  width: 80%;
+  height: auto;
+  margin: 10px 10%;
+  padding: 35px 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #EEEEEE;
+}
+.what-is-box p{
+  font-family: 'Roboto', serif;
+  font-weight: 400;
+  font-size: 17px;
+  margin: 15px auto;
+  line-height: 22px;
+  text-align: justify;
+}
+.subtitle-home h4{
+  font-family: 'BebasNeue', serif;
+  font-size: 25px;
+  color: #BDCC4A;
+  text-align: center;
+}
+.wf-title{
+  margin-top: 30px;
+}
+.w-find-items {
+    float: left;
+    width: 100%;
+    margin: 25px 0 !important;
+    padding: 0px 40px !important;
+}
+.section_what-is{
+  text-align: center;
+}
+.section_what-is img {
+    width: 60%;
+}
+.wf-modulo-title{
+  font-family: 'BebasNeue', serif;
+  font-size: 20px;
+}
+.wf-item {
+    padding: 10px 30px;
+}
+.wf-item h6 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 21px;
+    color: #aaaaaa;
+    text-align: center;
+}
+.wf-item ul{
+  padding-left: 15px;
+  margin: 0;
+}
+.wf-item ul li, .wf-item p {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 15px;
+  color: #282c59;
+}
+.wf-item p {
+  text-align: center;
+}
+.wf-item.wf-aprende{
+  border-right: dotted 2px #BDCC4A;
+  border-left: dotted 2px #BDCC4A;
+}
+p.link_what-is, p.link_what-is a{
+  font-size: 16px;
+  color: #BDCC4A;
+}
+.img-team{
+  float: left;
+  background-color: #23D0CB;
+  text-align: center;
+  width: 100%;
+}
+.img-team img {
+    margin: 0 auto;
+}
+.team-title{
+  margin: 25px 0 15px 0;
+}
+.team-items{
+  width: 80%;
+  margin: 10px 10% !important; 
+  float: left;
+  text-align: center;
+  color: #666666;
+}
+.name-profile{
+  font-family: 'BebasNeue';
+  font-size: 18px;
+  color: #21285a;
+}
+.position-profile{
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 15px;
+}
+.sponsors-text p{
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 18px;
+  color:#282c59;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+.sponsor-img-container {
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+
+}
+.padding-sponsors {
+  padding: 0;
+}
+.bg-countries-title {
+    height: 50px;
+    background-color: #BDCC4A;
+    z-index: 100;
+}
+.sponsor-images{
+  border-right: 1px dotted #BDCC4A;
+}
+.sponsor-images.globales{
+  border-right: none !important;
+}
+.sponsor-images ul{
+  padding: 0;
+  margin: 0;
+}
+.sponsor-images ul li{
+  list-style-type: none;
+  padding: 8px 0px;
+}
+.sponsor-images ul li a img.img-responsive {
+    max-width: 75%;
+}
+.country-title{
+  height: 50px;
+  font-family: 'BebasNeue';
+  font-size:18px;
+  text-align: center;
+  color: #fff;
+  margin-top: -10px;
+}
+.sponsor-images.globales ul li a img.img-responsive {
+  max-width: 68%;
+}
+/*GALERIA*/
+.carousel {
+    margin-bottom: 0;
+  padding-bottom: 30px;
+}
+/* Reposition the controls slightly */
+.carousel-control {
+  left: -12px;
+}
+.carousel-control.right {
+  right: -12px;
+}
+/* Changes the position of the indicators */
+.carousel-indicators {
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the colour of the indicators */
+.carousel-indicators li {
+  background: #c0c0c0;
+}
+.carousel-indicators .active {
+background: #2baae2;
+}
+.carousel-control {
+    position: absolute;
+    top: 40%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+    background: #222222;
+    border: 3px solid #ffffff;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    opacity: 0.5;
+}
+.well {
+    background-color: #f7f6f6;
+    padding: 40px;
+    border: none;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    float: left;
+}
+.video-datarep {
+    margin: 30px auto;
+    width: 50%;
+}
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media(min-width:1200px) {
+  .what-is-box {
+    width: 60%;
+    margin: 0 20%;
+  }
+  .video-datarep {
+    width: 70%;
+  }
+  .sponsor-img-container {
+    padding: 10px;
+  }
+  .sponsor-images ul li a img.img-responsive {
+    max-width: 50%;
+  }
+  .sponsor-images.globales ul li a img.img-responsive {
+    max-width: 48%;
+  }
+}
+@media(min-width:1500px) {
+  .sponsor-img-container {
+    padding: 10px 80px;
+  }
+}
+@media(max-width: 992px) {
+  .what-is-box p{
+    text-align: left;
+  }
+  .video-datarep {
+    margin: 20px auto;
+    width: 80%;
+  }
+  .sponsor-images ul li a img.img-responsive {
+    max-width: 70%;
+  }
+  .sponsor-images.globales ul li a img.img-responsive {
+    max-width: 35%;
+  }
+  .globales>.country-title{
+    background-color: #bdcc4a;
+  }
+  .globales>.country-title h3 {
+    padding-top: 10px;
+  }
+  
+}
+
+@media (max-width: 768px) { 
+  .what-is-box p{
+    text-align: center;
+  }
+  .sponsor-images {
+    padding: 0 !important;
+  }
+  .sponsor-images ul {
+    padding: 12px 0;
+  }
+  .sponsor-images ul li {
+    margin: 10px 0;
+  }
+  .sponsor-images ul li a img.img-responsive {
+    max-width: 90%;
+  }
+  .mexico>.country-title, .colombia>.country-title{
+    background-color: #bdcc4a;
+  }
+  .mexico>.country-title h3, .colombia>.country-title h3{
+    padding-top: 10px;
+  }
+  .wf-item.wf-aprende{
+    border-right: none;
+    border-left: none;
+    border-top: dotted 2px #BDCC4A;
+    border-bottom: dotted 2px #BDCC4A;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin: 10px 0;
+  }
+  .video-datarep {
+    width: auto;
+  }
+}
+
+@media(max-width:500px) {
+  .what-is-box {
+    width: 80%;
+    margin: 0 10%;
+    padding: 25px 35px;
+  }
+  .what-is-box p{
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

@@ -1,0 +1,364 @@
+<div class="network-container row container">
+
+    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 container-fluid network-viz-container">
+        <div class="network-viz-intro">
+            <p>A continuación encontrarás la relación del ecosistema de fuentes y datos para los ODS en este país. Haz clic en los círculos para acceder al catálogo y encontrar las relaciones entre ODS, fuentes de información y conjuntos de datos. Puedes descargar todos los catálogos a tu equipo.</p>
+        </div>
+        <div class="conventions-laws container-fluid row">
+            <div class="network-convention-box col-xs-12 col-sm-7 col-md-7 col-lg-7 ">
+                <div>
+                    <div class="network-convention" ng-repeat="convention_type in ['ods', 'fuente', 'datos'] ">
+                        <svg height="30" width="30">
+                            <circle class="{{convention_type}}" cx="15" cy="15" r="12"></circle>
+                        </svg>
+                        <span>
+                            <b>{{convention_type}}</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-lg-5 leyes-relacionadas">
+                <a href="" data-toggle="modal" data-target="#ley-pais">
+                    <h2>LEYES RELACIONADAS</h2>
+                </a>
+                <!-- Button trigger modal -->
+
+
+                <!-- Modal -->
+                <div class="modal" id="ley-pais" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title ley-pais-title" id="myModalLabel">{{countryName.toUpperCase()}}</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="items-ley-header container-fluid row">
+                                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                                        INSTRUMENTO NORMATIVO
+                                    </div>
+                                    <!--                                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                                                        FECHA
+                                                                    </div> -->
+                                    <div class="col-xs-5 col-sm-5 col-lg-5">
+                                        DESCRIPCIÓN
+                                    </div>
+                                    <div class="col-xs-2 col-sm-2 col-lg-2">
+                                        ENLACE
+                                    </div>
+                                </div>
+                                <div class="items-ley container-fluid row" ng-repeat="law in laws">
+
+                                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                                        {{law.NORMA}}
+                                    </div>
+                                    <!--                                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                                                        7/12/2011
+                                                                    </div> -->
+                                    <div class="col-xs-5 col-sm-5 col-lg-5">
+                                        {{law.DESCRIPCION}}
+                                    </div>
+                                    <div class="col-xs-2 col-sm-2 col-lg-2">
+
+                                        <a href="{{law.LINK}}" target="_blank">
+                                            <div class="img-ley-link"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary button-close-leyes" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-info-network row container-fluid hidden-md hidden-lg">
+            <div class="conecta-network col-xs-4 col-sm-5 col-md-4 col-lg-4">
+                <a href="">
+                    <img class="img-responsive" src="../images/logo-aprende-network.png">
+                </a>
+            </div>
+            <div class="network-viz-header col-xs-8 col-sm-7 col-md-8 col-lg-8">
+                <div class="country-name">
+                    {{countryName.toUpperCase()}}
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-lg-12" id="forcemap">
+        </div>
+
+        <div class="filters-network container-fluid">
+            <div class="filter-conecta row container-fluid">
+                <label class="col-xs-12 col-sm-3 col-md-4 col-lg-3 control-label">Tipo de fuente</label>
+                <select ng-model="data.selectedFuente" ng-change="changeFuente()" class="form-control col-xs-12 col-sm-9 col-md-8 col-lg-9">
+                    <option>Sector Público</option>
+                    <option>Sector Privado</option>
+                    <option>Sociedad Civil</option>
+                    <option>Academia</option>
+                    <option>Filantropía</option>
+                    <option>Organismos Multilaterales</option>
+                </select>
+            </div>
+            <div class="filter-conecta row container-fluid">
+                <label class="col-xs-12 col-sm-3 col-md-4 col-lg-3 control-label">Disponible en Línea</label>
+                <select ng-model="data.selectedEnLinea" ng-change="changeEnLinea()" class="form-control col-xs-12 col-sm-9 col-md-8 col-lg-9">
+                    <option>Si</option>
+                    <option>No</option>
+                </select>
+            </div>
+            <div class="filter-conecta button-clean">
+                <button type="button" ng-click="limpiarFiltrosCargarGrafoInicial()" class="btn btn-secondary">Limpiar
+                </button>
+            </div>
+        </div>
+
+
+        <!--         <div>
+                    <span>Tipo de fuente </span>
+                    <select>
+                        <option ng-repeat="option in getAllFilterOptions('TIPO DE FUENTE')" value="{{option}}">{{option}}</option>
+                    </select>
+                </div>
+
+                <div class="network-selectionable-element">
+                    <span>Disponible en linea</span>
+                    <select class="network-selectionable-element">
+                        <option ng-repeat="option in getAllFilterOptions('DISPONIBLE EN LC
+        NEA')"
+                                value="{{option}}"
+                                ng-click="clickFilter('DISPONIBLE EN LC
+        NEA', option)">
+                                {{option}}
+                        </option>
+                    </select>
+                </div> -->
+
+
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 network-node-info-container container-fluid">
+        <div class="header-info-network row container-fluid hidden-xs hidden-sm">
+            <div class="conecta-network col-xs-4 col-sm-5 col-md-4 col-lg-4">
+                <a href="">
+                    <img class="img-responsive" src="images/logo-aprende-network.png">
+                </a>
+            </div>
+            <div class="network-viz-header col-xs-8 col-sm-7 col-md-8 col-lg-8">
+                <div class="country-name">
+                    {{countryName.toUpperCase()}}
+                </div>
+            </div>
+        </div>
+
+        <div class=" network-node-info">
+
+            <span class="network-instructions" ng-show="nodeName==''">
+
+                <div class="perfil-paises container-fluid row">
+
+                    <div class="item-perfil_1
+                         col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                            <div class="img-item">
+                                <img class="center-block" src="images/iconsPerfilPais/IconsPerfilPais_icon_PIB.png">
+                            </div>
+                            <div class="text-item">
+                                <h5>PIB</h5>
+                                <p>(Miles de millones)</p>
+                                <h4>{{countryInfo.PIB}}</h4>
+                            </div>
+                    </div>
+
+                    <div class="item-perfil_1
+                         col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                            <div class="img-item">
+                                <img class="center-block" src="images/iconsPerfilPais/IconsPerfilPais_icon_NivelRenta.png">
+                            </div>
+                            <div class="text-item">
+                                <h5>Nivel de Renta</h5>
+                                <h4>{{countryInfo.RENTA}}</h4>
+                            </div>
+                    </div>
+
+                    <div class="item-perfil_1
+                         col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                            <div class="img-item">
+                                <img class="center-block" src="images/iconsPerfilPais/IconsPerfilPais_icon_Poblacion.png">
+                            </div>
+                            <div class="text-item">
+                                <h5>Población</h5>
+                                <p>(Millones)</p>
+                                <h4>{{countryInfo.POBLACION}}</h4>
+                            </div>
+                    </div>
+
+                    <div class="item-perfil_1
+                         col-xs-6 col-sm-3 col-md-4 col-lg-4">
+                            <div class="img-item">
+                                <img class="center-block" src="images/iconsPerfilPais/IconsPerfilPais_icon_TasaIncidencia.png">
+                            </div>
+                            <div class="text-item">
+                                <h5>Tasa de incidencia de la pobreza sobre la base de la línea nacional</h5>
+                                <h4>{{countryInfo.INCIDENCIA_POBREZA}}<</h4>
+                            </div>
+                    </div>
+
+                    <div class="item-perfil_2
+
+                        col-xs-6 col-sm-6 col-md-6 col-lg-6 row container-fluid">
+                        <div class="img-item col-xs-12 col-sm-3 col-md-4 col-lg-4">
+                            <img class="center-block" src="images/iconsPerfilPais/IconsPerfilPais_icon_IndiceDesarrollo.png">
+                        </div>
+                        <div class="text-item col-xs-12 col-sm-9 col-md-8 col-lg-8">
+                            <h5>Índice de Desarrollo Humano</h5>
+                            <h4>{{countryInfo.DESARROLLO_HUMANO}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="item-perfil_2
+                        col-xs-6 col-sm-6 col-md-6 col-lg-6 row container-fluid">
+                        <div class="img-item col-xs-12 col-sm-3 col-md-4 col-lg-4">
+                            <img class="center-block" src="images/iconsPerfilPais/IconsPerfilPais_icon_PosicionDesarrollo.png">
+                        </div>
+                        <div class="text-item col-xs-12 col-sm-9 col-md-8 col-lg-8">
+                            <h5>Posición en el índice de Desarrollo Humano</h5>
+                            <h4>{{countryInfo.POS_DESARROLLO_HUMANO}}</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </span>
+
+            <div class = "network-data" ng-show="nodeName!=''">
+                <div class="network-data-ods">
+                    <h4>
+                        {{nodeType}}
+                        <span ng-show="nodeType=='ods'" class="ods-image" >
+                                <span>
+                                    <img src="images/images_ODS {{odsIndex}}.png"/>
+
+                                </span>
+
+
+                            </span>
+                    </h4>
+                </div>
+
+
+
+                <p class="nodename">{{nodeName.toLowerCase()}}
+
+
+
+                </p>
+                <div class="row network-header-row">
+                    <div class="col-xs-3 col-sm-3 col-lg-3">
+                        {{{true: 'ODS', false: 'FUENTE'}[nodeType=='fuente']}}
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-lg-2">
+                        TIPO FUENTE
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-lg-3">
+                        {{{true: 'ODS', false: 'DATO'}[nodeType=='datos']}}
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-lg-2">
+                        FORMATO
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-lg-2">
+                        URL
+                    </div> 
+                </div>
+                <div class="network-table-data">
+                    <div ng-repeat = "datum in summarizedData">
+
+
+                        <div class="row network-row network-selectionable-element" ng-class="{'network-grey-row':$even,'':$odd}">
+                            <div class="col-xs-3 col-sm-3 col-lg-3 graph-selector" ng-show="nodeType=='fuente'">
+                                <p ng-repeat = "ods in datum.ODS" class="network-selectionable-element">
+                                    <span ng-click="clickNode({'name':ods,'type':'ods'})">
+                                        {{ods.toLowerCase()}}
+                                    </span>
+                                </p>
+                            </div>
+
+                            <div class="col-xs-3 col-sm-3 col-lg-3 graph-selector" ng-click="clickNode({'name':datum.FUENTE,'type':'fuente'})" ng-hide="nodeType=='fuente'">
+                                {{datum.FUENTE.toLowerCase()}}
+                            </div>
+
+                            <div class="col-xs-2 col-sm-2 col-lg-2 graph-selector">
+                                {{datum['TIPO DE FUENTE'].toLowerCase()}}
+                            </div>
+
+                            <div class="col-xs-3 col-sm-3 col-lg-3 graph-selector" ng-show="nodeType=='datos'">
+                                <p ng-repeat = "ods in datum.ODS" class="network-selectionable-element">
+                                    <span ng-click="clickNode({'name':ods,'type':'ods'})">
+                                        {{ods.toLowerCase()}}
+                                    </span>
+                                </p>
+                            </div>
+
+                            <div class="col-xs-3 col-sm-3 col-lg-3 graph-selector" ng-click="clickNode({'name':datum.DATOS,'type':'datos'})" ng-hide="nodeType=='datos'">
+                                {{datum.DATOS.toLowerCase()}}
+                            </div>
+                            <div class="col-xs-2 col-sm-2 col-lg-2 graph-selector">
+                                {{datum.FORMATO.replace("*",", ")||"N/A"}}
+
+                            </div>
+                            <div class="col-xs-2 col-sm-2 col-lg-2 graph-selector">
+                                <div class="source-link">
+                                    <a href="{{datum['DISPONIBLE EN']}}" ng-hide="datum['DISPONIBLE EN']==''"></a>
+                                    <span ng-show="datum['DISPONIBLE EN']==''">N/A</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class ="network-download-links row container-fluid">
+            <div class="txt-descarga-network col-xs-5 col-sm-4 col-md-5">
+                <h4>Descargas</h4>
+            </div>
+            <div class="descargas-network col-xs-7 col-sm-8 col-md-7 row">
+                <div class="item-csv col-xs-6 col-sm-6 col-md-6">
+                    <a href="files/{{countryId}}.zip">
+                        <h4>CSV</h4>
+                    </a>
+                </div>
+                <div class="item-xlsx col-xs-6 col-sm-6 col-md-6">
+                    <a href="files/{{countryId}}.xlsx"><h4>XLSX</h4></a>
+                </div>
+            </div>
+        </div>
+        <div class="descripcion-descarga">
+                <p> 
+                    En este espacio encontrarás un catálogo de conjuntos de datos de diferentes fuentes que se van recopilando día tras día. Con esto esperamos facilitar el acceso a los datos que pueden estar ubicados en diferentes lugares.
+                <br><br>
+                    Los datos están agrupados por países y están relacionados con el o los ODS a los que pueden contribuir. Puedes descargar libremente la matriz en formato csv o xlsx, en la que verás el diccionario de variables, los conjuntos de datos y las variables que los describen.
+                </p>
+            </div>
+
+    </div>
+    <div class="contacto-info-usuario">
+            <p>¿Tienes información sobre fuentes o conjuntos de datos que no estén aquí? •
+                ¿Detectaste algún error o información incompleta? •
+                ¿Eres usuario de estos datos y has construido nuevos contenidos con ellos?
+                <br><br>
+                <a href="mailto:datarepublica@cepei.org">Compártelo con nosotros en datarepublica@cepei.org</a>
+            </p>
+        </div>
+</div>

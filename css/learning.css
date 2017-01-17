@@ -1,0 +1,288 @@
+/*MENU*/
+.container-fluid{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+/** CONTENIDO **/
+.title-modulo.aprende{
+	padding-top: 25px;
+}
+.aprende-anos{
+	padding-top: 20px;
+	padding-bottom: 10px;
+	height: auto;
+}
+.aprende-anos.ano-2017{
+	border-left: #282c59 1px solid;
+}
+.title-year h3{
+	font-family: 'BebasNeue';
+	font-size:70px;
+	color: #23d0cb; 
+	text-align: center;
+	margin: 0;
+	line-height: 70px;
+}
+.title-year{
+	padding: 10px;
+}
+.title-taller{
+	padding: 15px;
+}
+.title-image{
+	border-right: none;
+}
+.title-image img {
+	    margin: 0 auto;
+	    float: none;
+	}
+.title-taller h4{
+	font-family: 'BebasNeue';
+	font-size: 20px;
+	color: #21285a;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.title-taller h4>span{
+	color: #bdcc4a;
+	font-size: 25px;
+}
+.countries-aprende{
+	margin: 20px 0;
+}
+.country-2016{
+	width: auto;
+}
+.circulo-country {
+    height: 65px;
+    width: 65px;
+    border-radius: 50px;
+    background-color: #bdcc4a;
+    color: #FFF;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+    padding: 27px 2px;
+    margin-left: 20%;
+}
+.txt-cr{
+	padding-top: 22px;
+}
+.fecha-taller{
+	font-family: 'Roboto';
+	font-size: 14px;
+	color: #21285a;
+	text-align: center;
+	font-weight: 400;
+	margin-top: 10px;
+}
+.cuadro-info{
+	height: auto;
+	display: block;
+	padding: 10px 15px;
+	background-color: #21285a;
+}
+.cuadro-info p{
+	font-family: 'Roboto';
+	font-size: 16px;
+	color: #fff;
+	text-align: left;
+	font-weight: 400;
+	margin-top: 15px;
+}
+.info-mooc {
+    margin: 40px 0 20px 0;
+}
+.aprende-aliados{
+	padding-top: 40px;
+	padding-bottom: 10px;
+}
+.aliados-title-aprende h5{
+	font-family: 'BebasNeue';
+	font-size: 40px;
+	color: #23d0cb;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.logos-aprende>div>img {
+	max-width: 82%;
+    margin: 0px auto 20px auto;
+}
+.escuela-datos_aprende img{
+	max-width: 70%;
+}
+.social-tic_aprende img {
+    max-width: 70%;
+}
+@media only screen and (min-width: 1200px){
+
+	.title-image {
+		border-right: 1px dotted #23d0cb;
+	    margin-top: 20px;
+	}
+	.title-image img {
+    margin: 0 auto;
+    float: right;
+}
+	.title-taller h4{
+		text-align: left;
+	}
+	.country-taller{
+    	padding: 0;
+    	margin: 0;
+	}
+	.country-2016>.circulo-country {
+		margin-left: 30%;
+	}
+	.circulo-country {
+		margin-left: 38%;
+	}
+	.logos-aprende>div>img {
+		max-width: 62%;
+	}
+}
+@media only screen and (min-width: 1439px){
+	.circulo-country {
+	    height: 70px;
+	    width: 70px;
+	    font-family: 'Roboto';
+	    font-weight: 400;
+	    font-size: 13px;
+	    line-height: 15px;
+	}
+	.logos-aprende>div>img {
+		max-width: 50%;
+	}
+}
+@media only screen and (max-width: 1093px){
+	.circulo-country{
+		margin: 0 40px;
+	}
+}
+@media only screen and (max-width: 992px){
+	.description-modulo-full {
+	    padding: 12px 25px;
+	}
+
+	.aprende-anos{
+		height: auto;
+	}
+	.aprende-anos.ano-2017{
+		border-left: none;
+		border-top: #282c59 1px solid;
+	}
+	.title-taller {
+	    width: 70%;
+	    margin: 0 auto;
+	}
+	.title-taller h4{
+		text-align: left;
+	}
+	.title-image {
+		border-right: 1px dotted #23d0cb;
+	}
+	.country-taller{
+		margin: 0px auto;
+    	padding: 0 3%;
+	}
+	.country-2016{
+		width: 60%;
+		margin: 0 30% !important;
+	}
+	.circulo-country{
+	    height: 70px;
+	    width: 70px;
+	    font-family: 'Roboto';
+	    font-weight: 400;
+	    font-size: 13px;
+	    line-height: 15px;
+	    margin: 0;
+	}
+	.fecha-taller {
+	    margin-top: 20px;
+	}
+	.aprende-aliados {
+	    padding-top: 20px;
+	}
+	.logos-aprende>div>img {
+	    max-width: 70%;
+	}
+	.social-tic_aprende img {
+	    width: 46% !important;
+	}
+	.escuela-datos_aprende img {
+	    max-width: 40% !important;
+	}
+	.logos-aprende>div>img {
+    margin: 0px auto 30px auto;
+	}
+	.miriadax_aprende img{
+		margin-top: 30px;
+	}
+}
+@media only screen and (max-width: 768px){
+	.title-image {
+	    border-right: none;
+	}
+	.title-image img {
+	    margin: 0 auto;
+	}
+	.title-taller {
+	    width: 100%;
+	}
+	.title-taller h4{
+		text-align: center;
+	}
+	.country-taller{
+		margin: 10px auto;
+   		padding-left: 18%;
+	}
+	.country-2016{
+		width: 100%;
+		margin: 0 !important;
+	}
+	.circulo-country{
+		height: 90px;
+		width: 90px;
+		font-size: 14px;
+		line-height: 15px;
+		text-align: center;
+		padding: 38px 2px;
+		margin: 0 34px;
+	}
+	.txt-cr{
+		padding-top: 33px;
+	}
+	.fecha-taller {
+		font-size: 18px;
+		text-align: left;
+	    margin-top: 21px;
+	}
+	.cuadro-info{
+		margin-bottom: 10px;
+	}
+	.miriadax_aprende img{
+		max-width: 43% !important;
+	}
+}
+@media only screen and (max-width: 591px){
+	.country-taller{
+		padding: 0 10%;
+	}
+	.miriadax_aprende img{
+		max-width: 65% !important;
+	}
+}
+@media only screen and (max-width: 500px){
+	.country-taller{
+		padding: 0 4.8%;
+	}
+	.fecha-taller {
+		font-size: 15px;
+		margin-top: 24px;
+	}
+
+}

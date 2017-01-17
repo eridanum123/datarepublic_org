@@ -1,0 +1,467 @@
+.header-home {
+  width: 100%;
+  min-height: 30vh;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+}
+.intro{
+  width: 100%;
+  margin: 10vh 0 20px 0;
+}
+
+#bg-animation-canvas{
+  position: absolute;
+  top:0px;
+  /*height: 400vh;*/
+}
+
+
+.menu-home{
+  background-color: rgba(255,255,255,0.5);
+  /*padding: 0px!important;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*min-height: 11.7vh;*/
+
+
+}
+.intro .big-text{
+  font-size: 2.25em;
+  text-align: center;
+  line-height: 36px;
+  color:#21285A;
+  font-family: 'BebasNeue', serif;
+}
+.small-text p{
+  font-family: 'Roboto', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  width: 55%;
+  margin: 0 auto;
+}
+.intro .small-text{
+  font-size: 1.3em;
+  font-size:  1vw;
+  margin-top: 1.1em;
+  text-align: center;
+  color: #21285A;
+}
+
+.menu-modulos-container{
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+}
+.menu-modulos{
+  width: 28%;
+  margin: 0 2.6%;
+  padding: 10px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  z-index: 600;
+}
+.menu-modulos a{
+ align-items: center;
+}
+
+.menu-modulos p{
+  font-family: 'Roboto';
+  font-weight: 400;
+  padding-top: 1.5vh;
+  font-size: 15px;
+  line-height: 17px;
+  color:#282c59;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.menu-home h2{
+    margin-top: 0px;
+    margin-bottom: 2vh;
+    font-size: 3vw;
+    color:#282c59;
+    font-weight: 100;
+    width: 100%;
+    text-align: center;
+  /*width: 70%;*/
+
+}
+
+  -- Validar este contenido es de prueba Robinson 
+  .photos-group {
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+}
+
+
+.photoshoot-title {
+    text-align: center;
+    color: #413030;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: 'latoregular';
+    font-weight: bold;
+    position: relative;
+}
+
+  -- Validar este contenido es de prueba Robinson 
+
+
+.menu-modulos a:hover{
+  text-decoration: none;
+  color: #23D2CD;
+}
+.menu-modulos p:hover{
+  color: #23D2CD;
+}
+.bg-content-modulos {
+  background-color: #EEEEEE;
+  margin-top: -210px;
+  height: 130px;
+  width: 100%;
+  z-index: 500;
+}
+.img-modulos{
+  width: auto;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: 82%;
+  background-position: center;
+  background-color: #fff;
+  text-align: center;
+  margin: 0 auto;
+}
+.conecta-img{
+  background-image: url(../images/logo-conecta-home.png);
+}
+.publica-img{
+  background-image: url(../images/logo-publica-home.png);
+}
+.aprende-img{
+  background-image: url(../images/logo-aprende-home.png);
+}
+.img-modulos:hover{
+  background-color: #BDCC4A;
+}
+.conecta-img:hover{
+  background-image: url(../images/logo-conecta-home_on.png);
+}
+.publica-img:hover{
+  background-image: url(../images/logo-publica-home_on.png);
+}
+.aprende-img:hover{
+  background-image: url(../images/logo-aprende-home_on.png);
+}
+.home-scroll{
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7vh;
+}
+.scrolldown{
+  height: 35px;
+  width: 35px;
+  background-image: url(../images/icon_scrolldown.png);
+}
+.scrolldown:hover{
+  background-image: url(../images/icon_scrolldown_on.png);
+}
+.scrollup{
+  height: 35px;
+  width: 35px;
+  background-image: url(../images/icon_scrollup.png);
+}
+.scrollup:hover{
+  background-image: url(../images/icon_scrollup_on.png);
+}
+.scroll-icon{
+  max-height: 4vh;
+}
+.home-section-title{
+  margin: 30px auto 20px auto;
+}
+.home-section-title h2{
+  font-family: 'BebasNeue', serif;
+  color:#21285A;
+  text-align: center;
+  font-size:70px;
+  width: 94%;
+  margin: 0 3%;
+}
+.home-section-title h3{
+  font-family: 'Roboto';
+  color:#21285A;
+  text-align: center;
+  font-size:50px;
+  font-weight: 100;
+  width: 94%;
+  margin: 0 3%;
+}
+
+.novedades{
+  float: left;
+  margin: 20px 0;
+}
+.news-box{
+  width: 28%;
+  height: 520px;
+  margin: 0 2.6%;
+  padding: 38px 30px 20px 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: #EEEEEE;
+  z-index: 600;
+}
+.news-box p{
+  font-family: 'Roboto';
+  margin-bottom: 30px;
+  text-align: center;
+}
+p.news-text{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #666666;
+}
+p.news-important{
+  font-size: 17px;
+  line-height: 20px;
+  color: #21285A;
+  font-weight: 400;
+  text-align: center;
+}
+p.news-link{
+  font-size: 18px;
+  color: #21285A;
+  font-weight: 400;
+  text-align: center;
+}
+p.news-link a{
+  color: #23D0CB; 
+}
+p.news-link a:hover{
+  text-decoration:none; 
+  color: #21285A;
+}
+.bg-content-news{
+  background-color: #23D0CB;
+  margin-top: -325px;
+  height: 130px;
+  width: 100%;
+  z-index: 500;
+}
+.logos-home {
+    float: left;
+    width: 100%;
+}
+.logos-home >div>h4{
+  font-family: 'BebasNeue', serif;
+  font-size: 25px;
+  color: #BDCC4A;
+  text-align: center;
+}
+.logo-cepei_home p{
+  font-family: 'Roboto';
+  text-align: center;
+  color:#282c59;
+}
+.logo-telefonica_home>a img {
+  margin-top: 40px;
+}
+#contact-us{
+  height: 100vh;
+}
+.contact-us-container {
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    margin: 0 auto 30px auto;
+}
+.contact-us-container p{
+  width: 100%;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: #666666;
+  margin: 10px 0 30px 0;
+}
+#contact-us form{
+  text-align: center;
+  color:#282c59;
+}
+#contact-us textarea {
+    text-align: left;
+    padding-left:0;
+    padding-top:0;
+    padding-bottom:0.4em;
+    padding-right: 0.4em;
+    height: 50vh;
+}
+.send-btn {
+  margin: 20px auto;
+}
+@media(min-width:1200px) {
+  .small-text p{
+    width: 50%;
+  }
+  .img-modulos{
+    width: 320px;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-size: 85%;
+  }
+  .menu-modulos p{
+    width: 80%;
+  }
+  .bg-content-modulos {
+    margin-top: -216px;
+    height: 130px;
+  }
+  .bg-content-news {
+    margin-top: ;
+  }
+  .news-box{
+    height: 550px;
+  }
+}
+@media(min-width:1500px) {
+  .news-box{
+    height: 600px;
+  }
+}
+@media(max-width:1040px) {
+  .bg-content-modulos {
+    margin-top: -226px;
+  }
+  .news-box {
+    height: ;
+  }
+}
+@media(max-width:992px) {
+  .small-text p{
+    width: 65%;
+  }
+  .intro .big-text{
+    font-size: 2.2em;
+  }
+  .menu-home{
+    height:100%;
+    width: 80%;
+  }
+  .img-modulos{
+    background-size: 95%;
+  }
+  .bg-content-modulos {
+    margin-top: -226px;
+  }
+  .news-box {
+    width: 30%;
+    height: 535px;
+    margin: 0 1.6%;
+    padding: 40px 30px 20px 30px;
+  }
+  p.news-text {
+    font-size: 15px;
+  }
+  p.news-important{
+    font-size: 16px;
+  }
+
+}
+
+@media(max-width:800px) {
+  .bg-content-modulos {
+    margin-top: -243px;
+  }
+  .news-box {
+    height: 550px;
+    padding: 30px 30px 20px 30px;
+  }
+}
+
+@media (max-width: 768px) { 
+  .header-home {
+    margin-top: 0vh;
+    margin-bottom: 2vh;
+  }
+  .navbar-brand {
+    padding: 11px 25px;
+  }
+  .intro{
+    margin: 7vh 0 10px 0;
+  }
+  .small-text p{
+    width: 78%;
+  }
+  .intro .big-text{
+    font-size: 2em;
+    line-height: 1em;
+    padding: 0 10px;
+  }
+  .menu-modulos{
+    width: 100%;
+    margin: 10px auto;
+  }
+  .img-modulos{
+    background-size: 40%;
+  }
+  .menu-modulos p{
+    width: 60%;
+  }
+  .bg-content-modulos {
+    height: 0;
+  }
+  .bg-content-news {
+    height: 0;
+  }
+  .novedades {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+  .news-box{
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    padding: 40px 80px 20px 80px;
+  }
+  .logo-telefonica_home{
+    margin-bottom: 10px;
+  }
+  .logo-telefonica_home>a img {
+    margin-top: 10px;
+  }
+  .contact-us-container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 500px) { 
+  .small-text p{
+    width: 90%;
+  }
+  .home-section-title h2 {
+    font-size: 70px;
+  }
+  .team-items{
+    width: 100%;
+    margin: 20px 0% !important; 
+  }
+  .news-box {
+    height: auto;
+    padding: 40px 40px 20px 40px;
+  }
+  .img-modulos{
+    background-size: 60%;
+  }
+  .contact-us-container {
+    width: 90%;
+  }
+}
