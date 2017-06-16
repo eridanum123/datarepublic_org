@@ -91,27 +91,6 @@
 
 }
 
-  -- Validar este contenido es de prueba Robinson 
-  .photos-group {
-    width: 100%;
-    float: left;
-    margin-bottom: 30px;
-}
-
-
-.photoshoot-title {
-    text-align: center;
-    color: #413030;
-    text-transform: uppercase;
-    font-size: 22px;
-    font-family: 'latoregular';
-    font-weight: bold;
-    position: relative;
-}
-
-  -- Validar este contenido es de prueba Robinson 
-
-
 .menu-modulos a:hover{
   text-decoration: none;
   color: #23D2CD;

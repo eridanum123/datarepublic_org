@@ -386,7 +386,7 @@ text {
 }
 .item-perfil_1{
   padding-top: 10px;
-  height: 210px;
+  height: 240px;
   border-right: 1px dotted #ddd;
   border-bottom: 1px solid #ddd;
 
@@ -548,6 +548,9 @@ text {
   }
 }
 @media only screen and (min-width: 1200px){
+  .item-perfil_1{
+    height: 210px;
+  }
   .country-name{
     line-height: 96px;
   }
